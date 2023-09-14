@@ -8,6 +8,7 @@ class doilanguages extends GenericPlugin
     {
         $success = parent::register($category, $path);
         if ($success && $this->getEnabled()) {
+            //hooky da página de artigos
             HookRegistry::register('TemplateResource::getFilename', [$this, '_overridePluginTemplates']);
         }
 

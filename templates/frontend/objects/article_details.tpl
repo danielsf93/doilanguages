@@ -17,7 +17,8 @@
 <hr>
 Testes:<br>
 {$loggedInUsername|escape}<br>
-{$currentLocale|escape}
+{$currentLocale|escape}<br>
+{$primaryLocale|escape}<br>
 <hr>
 	{if $publication->getLocalizedData('subtitle')}
 		<h2 class="subtitle">
@@ -70,7 +71,11 @@ Testes:<br>
 							{translate key="semicolon" label=$translatedDOI}
 						</h2>
 						<span class="value">
-						{if $currentLocale|escape eq 'pt_BR'}
+
+						{***
+									MODIFICANDO a forma como o doi é apresentado dependendo do idioma
+						**}
+						{if $currentLocale|escape eq $primaryLocale|escape}
 							<a href="{$doiUrl}">
 								{$doiUrl}
 							</a>
@@ -79,6 +84,9 @@ Testes:<br>
 								{$doiUrl}{$currentLocale|escape}
 							</a>
 						{/if}
+
+
+						
 						</span>
 					</section>
 				{/if}
