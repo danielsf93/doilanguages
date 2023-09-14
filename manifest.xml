@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <primary_locale>pt_BR</primary_locale>
+  <plugin
+    id="doilanguages"
+    system="3.2.1-1"
+    package="doilanguages"
+    directory="doilanguages"
+    name="doilanguages"
+    description="."
+    version="1.0.0"
+    date="2023-01-25"
+    author="STI FFLCH and ABCD USP"
+    email="sti.fflch@usp.br"
+    url="https://github.com/danielsf93/doilanguages"
+  >
+  </plugin>
+</manifest>
